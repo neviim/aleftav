@@ -1,0 +1,8 @@
+# 
+
+Instalando o service
+
+    $ cd ~/aleftav/src
+
+    $ sudo cp aleftav.service /lib/systemd/system/aleftav.service 
+    $ sudo chmod 644 /lib/systemd/system/aleftav.service

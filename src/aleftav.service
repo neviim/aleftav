@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=idle
-ExecStart=/usr/bin/python /deploy/aleftav/src/chatServer.py
+ExecStart=/usr/bin/python /deploy/aleftav/src/chatServer.py /var/log/aleftav/alefServer.log 2>&1
 
 [Install]
 WantedBy=multi-user.target
