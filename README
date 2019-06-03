@@ -1,8 +1,32 @@
-# 
+Utilizando python 2.7 
+
+    - Biblioteca padrão
+
 
 Instalando o service
 
-    $ cd ~/aleftav/src
+    # config systemctl:
 
+    $ cd ~/aleftav/src
     $ sudo cp aleftav.service /lib/systemd/system/aleftav.service 
     $ sudo chmod 644 /lib/systemd/system/aleftav.service
+    # --------------------------------------------------
+
+
+    # Server:
+    $ sudo systemctl daemon-reload
+    $ sudo systemctl start aleftav.service
+    $ sudo systemctl status aleftav.service
+    $ sudo systemctl enable aleftav.service
+    # -------------------------------------
+
+
+    # Cliente
+    # python chatCliente.py <ip_do_servidor> <porta>
+    $ python chatCliente.py 192.168.200.213 9009
+    # ------------------------------------------
+
+
+    # Log
+    # gerado em: /var/log/aleftav
+    # ---------------------------

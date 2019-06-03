@@ -11,7 +11,7 @@ import sys
 import socket
 import select
 
-HOST = '192.168.0.122' 
+HOST = '192.168.200.213' 
 SOCKET_LIST = []
 RECV_BUFFER = 4096 
 PORT = 9009
