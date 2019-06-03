@@ -3,11 +3,10 @@ Utilizando python 2.7
     - Biblioteca padrão
 
 
-Instalando o service
+Instalando o service:
 
     # config systemctl:
-
-    $ cd ~/aleftav/src
+    $ cd ~/aleftav/config
     $ sudo cp aleftav.service /lib/systemd/system/aleftav.service 
     $ sudo chmod 644 /lib/systemd/system/aleftav.service
     # --------------------------------------------------
@@ -23,6 +22,7 @@ Instalando o service
 
     # Cliente
     # python chatCliente.py <ip_do_servidor> <porta>
+    $ cd ~/aleftav/src 
     $ python chatCliente.py 192.168.200.213 9009
     # ------------------------------------------
 
@@ -30,3 +30,19 @@ Instalando o service
     # Log
     # gerado em: /var/log/aleftav
     # ---------------------------
+
+
+Novos recussos:
+
+    [ ] Identificar o IP do servidor altomaticamente
+    [ ] Aplicar color ao prompt
+    [ ] Opção para sair do Cliente
+    [ ] Identificar o usuario por nome
+
+
+
+Versão:
+
+0.4
+  - Modulo basico do Server.
+  - Modulo basico do Cliente.
