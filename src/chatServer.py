@@ -20,6 +20,7 @@ def chat_server():
 
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    # HOST, PORT = server_socket.getsockname()
     server_socket.bind((HOST, PORT))
     server_socket.listen(10)
  

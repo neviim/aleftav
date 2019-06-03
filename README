@@ -3,6 +3,20 @@ Utilizando python 2.7
     - Biblioteca padrão
 
 
+Virtual:
+
+    # Windows:
+    $ conda create -n <seu_env_nome> python=2.7 anaconda
+    $ conda -V
+    $ conda update conda
+    $ conda info -e 
+
+    $ source activate <seu_env_nome>
+    $ source deactivate 
+
+    $ conda remove -n <seu_env_nome> -all
+
+
 Instalando o service:
 
     # config systemctl:
