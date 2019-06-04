@@ -11,8 +11,8 @@ Virtual:
     $ conda update conda
     $ conda info -e 
 
-    $ source activate <seu_env_nome>
-    $ source deactivate 
+    $ conda activate <seu_env_nome>
+    $ conda deactivate 
 
     $ conda remove -n <seu_env_nome> -all
 
