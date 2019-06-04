@@ -8,8 +8,6 @@
 '''
 
 import sys
-sys.path.append('../color')
-
 import socket
 import select
 from cores import *
