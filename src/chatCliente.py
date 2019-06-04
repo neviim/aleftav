@@ -8,9 +8,13 @@
 '''
 
 import sys
+sys.path.append('../color')
+
 import socket
 import select
+from cores import *
  
+
 def chat_client():
     if(len(sys.argv) < 3) :
         print 'Como utilizar: python chat_client.py hostname port'
@@ -28,9 +32,10 @@ def chat_client():
     except :
         print 'Incapaz de conectar'
         sys.exit()
-     
-    print 'Conectado ao servidor. pode enviar mensagens' 
-    sys.stdout.write('[-->] '); sys.stdout.flush()
+
+    print CYAN+ ALEFTAV1 +NORMAL     
+    print YELLOW + 'Systema conectado, modulo mensagem ativo!!! - V0.4 \n' + NORMAL 
+    sys.stdout.write( RED +'[-->] '+ NORMAL ); sys.stdout.flush()
      
     while 1:
         socket_list = [sys.stdin, s]
@@ -48,13 +53,13 @@ def chat_client():
                 else :
                     # escreve os dados
                     sys.stdout.write(data)
-                    sys.stdout.write('[<--] '); sys.stdout.flush()     
+                    sys.stdout.write( GREEN + '[<--] ' + NORMAL ); sys.stdout.flush()     
             
             else :
                 # usuário digitou uma mensagem
                 msg = sys.stdin.readline()
                 s.send(msg)
-                sys.stdout.write('[<--] '); sys.stdout.flush() 
+                sys.stdout.write( GREEN + '[<--] ' + NORMAL ); sys.stdout.flush() 
 
 
 if __name__ == "__main__":

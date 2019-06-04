@@ -8,8 +8,11 @@
 '''
 
 import sys
+sys.path.append('../color')
+
 import socket
 import select
+from cores import *
 
 HOST = '192.168.200.213' 
 SOCKET_LIST = []
@@ -26,7 +29,8 @@ def chat_server():
     # adicionar objeto de socket do servidor à lista de conexões legíveis
     SOCKET_LIST.append(server_socket)
  
-    print "Servidor de bate-papo iniciado na porta " + str(PORT)
+    print CYAN+ ALEFTAV1 +NORMAL
+    print "Serviço ativo, inicializado na porta: " + YELLOW + str(PORT) + NORMAL + '\n'
 
  
     while 1:
@@ -52,7 +56,8 @@ def chat_server():
 
                     if data:
                         # há algo no socket
-                        broadcast(server_socket, sock, "\r" + "[-->] " + '[' + str(sock.getpeername()) + '] ' + data)  
+                        hostIp, userId = str(sock.getpeername())
+                        broadcast(server_socket, sock, "\r" + GREEN + "[<--] " + NORMAL + '[' + str(sock.getpeername()) + '] ' + data)  
                     else:
                         # remova o socket que está quebrado    
                         if sock in SOCKET_LIST:
