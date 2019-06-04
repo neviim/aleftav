@@ -37,10 +37,10 @@ def chat_client():
     if sys.platform == "linux" or sys.platform == "linux2":
         # linux
         os.system("clear")
-    elif platform == "darwin":
+    elif sys.platform == "darwin":
         # OS X
         pass
-    elif platform == "win32":
+    elif sys.platform == "win32":
         #Windows
         os.system("cls")
     
