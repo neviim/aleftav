@@ -8,13 +8,11 @@
 '''
 
 import sys
-sys.path.append('../color')
-
 import socket
 import select
 from cores import *
 
-HOST = '192.168.200.213' 
+HOST = '0.0.0.0' 
 SOCKET_LIST = []
 RECV_BUFFER = 4096 
 PORT = 9009

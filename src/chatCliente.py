@@ -3,13 +3,11 @@
 
 ''' Cliente
     
-    $ python chat_client.py localhost 9009
-     Conectado ao host remoto. Você pode começar a enviar mensagens
+    $ python chatCliente.py <ip_do_chatserver> 9009
+    Conectado ao host remoto. Você pode começar a enviar mensagens
 '''
 
 import sys
-sys.path.append('../color')
-
 import socket
 import select
 from cores import *
